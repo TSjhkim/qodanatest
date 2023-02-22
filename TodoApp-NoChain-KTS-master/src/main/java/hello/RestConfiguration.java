@@ -7,7 +7,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 @Configuration
-public  {
+public class RestConfiguration {
 
     @Bean
     public CorsFilter corsFilter() {
@@ -15,10 +15,10 @@ public  {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true); // you USUALLY want this
-        config.addAllowedOrigin();
-        config.addAllowedHeader();
-        config.addAllowedMethod();
-        config.addExposedHeader(ion");
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+        config.addExposedHeader("Location");
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }

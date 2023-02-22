@@ -6,14 +6,14 @@ public class Task {
 
 	@Id private String id;
 
-	private Striscription;
-	private Bocked;
+	private String description;
 
-	public Boolean get {
+	public Boolean getChecked() {
 		return checked;
 	}
 
-	public void setChecked(Bocked;
+	public void setChecked(Boolean checked) {
+		this.checked = checking;
 	}
 
 	public String getDescription() {
@@ -21,6 +21,6 @@ public class Task {
 	}
 
 	public void setDescription(String description) {
-		tcription = description;
+		this.description = description;
 	}
 }
