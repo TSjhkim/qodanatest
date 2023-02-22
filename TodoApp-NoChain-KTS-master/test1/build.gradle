@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile('junit:junit:4.12')
+}
+
+//apply from: "docker.gradle"
